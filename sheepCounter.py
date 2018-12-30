@@ -17,6 +17,8 @@ class counter(object):
                     self.countArray.append(number)
                     os.system("say " + str(number) + " sheep")
                     print(str(number) + " sheep")
+                    if (number == max):
+                        print("Are you sleepy yet?")
                     if (number <= 10):
                         self.time = self.time + 0.10
                         time.sleep(self.time)
@@ -25,6 +27,15 @@ class counter(object):
                         time.sleep(self.time)
                     elif (number <= 1000):
                         self.time = self.time + 0.0010
+                        time.sleep(self.time)
+                    elif (number <= 10000):
+                        self.time = self.time + 0.00010
+                        time.sleep(self.time)
+                    elif (number <= 100000):
+                        self.time = self.time + 0.000010
+                        time.sleep(self.time)
+                    elif (number <= 1000000):
+                        self.time = self.time + 0.0000010
                         time.sleep(self.time)
             except (KeyboardInterrupt):
                 print("Counter Stopped at: " + str(self.countArray[-1]))
