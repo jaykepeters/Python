@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import time
+import os
 class counter(object):
     def __init__(self, max):
         self.max = int(max)
@@ -14,6 +15,7 @@ class counter(object):
             try:
                 for number in range(1, (self.max+1)):
                     self.countArray.append(number)
+                    os.system("say " + str(number) + " sheep")
                     print(str(number) + " sheep")
                     if (number <= 10):
                         self.time = self.time + 0.10
@@ -28,5 +30,5 @@ class counter(object):
                 print("Counter Stopped at: " + str(self.countArray[-1]))
                 exit(1)
 
-newCounter = counter("1000")
+newCounter = counter("10000")
 newCounter.count()
